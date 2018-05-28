@@ -26,7 +26,7 @@
 
 <style scoped>
     .slotContent {
-        background-color: lightgray;
+        background-color: #fefefe;
         width: 600px;
         margin: 10px auto;
         padding: 10px;

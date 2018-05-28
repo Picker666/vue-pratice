@@ -20,6 +20,19 @@
             </template>
         </slot-scope>
 
+        <hr>
+
+        <h3>This is a tab in order to trying to pratice with the attribute named 'is'.</h3>
+        <nav>
+            <button @click="currentComponent='slot-content'" v-text="'slot-content'"></button>
+            <button @click="currentComponent='slot-scope'" v-text="'slot-scope'"></button>
+        </nav>
+        <component :is="currentComponent" :list="list" title="插槽">
+            <template slot-scope="slotProps">
+                <span v-text="slotProps.item && slotProps.item.name"></span>
+            </template>
+        </component>
+
         <r-footer
 			from="transfer Data"
 			to=""
@@ -38,7 +51,8 @@
         name: 'slotSection',
         data: function () {
             return {
-                list: [{name: 'ddsf'}, {name: 'fff'}, {name: 'ggg'}]
+                list: [{name: 'ddsf'}, {name: 'fff'}, {name: 'ggg'}],
+                currentComponent: 'slot-content'
             }
         },
         components: {

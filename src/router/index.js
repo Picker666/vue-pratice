@@ -1,9 +1,12 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Custom from '../components/forTransferData/Custom';
-import BasePratice from '@/components/basePratice';
-import Hello from '@/components/Hello';
-import SlotSection from '@/components/slotDemo';
+import {
+    Hello,
+    BasePratice,
+    Custom,
+    SlotSection,
+    TransitonAnimate
+} from '@/components';
 
 Vue.use(Router);
 
@@ -32,6 +35,11 @@ export default new Router({
             path: '/slotSection',
             name: 'slotSection',
             component: SlotSection
+        },{
+            path: '/transitonAnimate',
+            name: 'transitonAnimate',
+            component: TransitonAnimate
         }
+
     ]
 });
